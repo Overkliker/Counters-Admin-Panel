@@ -1,0 +1,78 @@
+.div-chart{
+  width: 60%;
+}
+
+.full-widgets{
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.container-data{
+  display: flex;
+  justify-content: center;
+  margin-top: 25px;
+  width: 300px;
+}
+
+.on-next{
+  margin-left: 3rem;
+}
+
+.my-data{
+
+  margin-top: 5px;
+}
+
+.btn-reset{
+  font-family: U-Regular;
+  color: white;
+  background-color: #314CB6;
+}
+
+.btn-reset:hover{
+  background-color: #6975E5;
+}
+
+.select-container{
+  margin-top: 10px;
+  margin-left: 2%;
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.date-container{
+  display: flex;
+  height: 30px;
+}
+
+
+.select-type-btn{
+  font-family: U-Regular;
+  color: white;
+  background-color: #314CB6;
+}
+
+
+$color3: #B8B8B8;
+
+.tableFixHead {
+  overflow-y: auto;
+  height: 23rem;
+}
+.tableFixHead thead th {
+  position: sticky;
+  top: 0px;
+  background: white;
+}
+
+td{
+  font-family: U-Regular;
+}
+
+
+
+
+

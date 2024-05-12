@@ -1,0 +1,67 @@
+<div>
+  <div class="full-widgets">
+    <div class="div-chart">
+      <app-my-indications-chart [points]="pointsChart"></app-my-indications-chart>
+    </div>
+
+    <div class="my-data">
+      <div class="container-data">
+        <div class="card">
+        <div class="card-body">
+          <div class="table-responsive tableFixHead">
+            <table class="table" >
+              <thead class=" text-primary">
+              <th>
+                Время
+              </th>
+              <th>
+                Данные
+              </th>
+              </thead>
+              <tbody>
+              <tr *ngFor="let i of tableData">
+                <td>
+                  {{ i[0] }}
+                </td>
+                <td>
+                  {{ i[1] }}
+                </td>
+              </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+  </div>
+  <div class="select-container">
+    <div class="date-container">
+      <p style="margin-right: 5px">Начало: </p>
+      <input type="date" [(ngModel)]="bindingStartDate" id="from-date-picker">
+    </div>
+
+    <div class="date-container">
+      <p style="margin-right: 5px">Конец: </p>
+      <input type="date" [(ngModel)]="bindingEndDate" id="to-date-picker">
+    </div>
+
+    <div class="">
+      <button (click)="reselectClick()" class="btn btn-reset" >Обновить</button>
+    </div>
+
+    <select (change)="selectNewCounter($event)" id="counter-select">
+      <optgroup *ngFor="let counter of counterIds" label="">
+        <option value="{{counter.counter.id}}">{{counter.counterName}}</option>
+      </optgroup>
+
+    </select>
+
+
+    <div>
+      <button *ngIf="btnIndicationsClicked" (click)="setTypeData()" class="btn select-type-btn">Показания</button>
+      <button *ngIf="!btnIndicationsClicked" (click)="setTypeData()" style="background-color: #FFBA00" class="btn select-type-btn">Потребление</button>
+    </div>
+  </div>
+</div>
+

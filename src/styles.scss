@@ -1,1 +1,37 @@
-/* You can add global styles to this file, and also import other style files */
+@font-face {
+  font-family: 'U-Bold';
+  src: url('assets/Ubuntu-Bold.ttf');
+}
+
+@font-face {
+  font-family: 'U-BoldItalic';
+  src: url('assets/Ubuntu-BoldItalic.ttf');
+}
+
+@font-face {
+  font-family: 'U-Light';
+  src: url('assets/Ubuntu-Light.ttf');
+}
+
+@font-face {
+  font-family: 'U-LightItalic';
+  src: url('assets/Ubuntu-LightItalic.ttf');
+}
+
+@font-face {
+  font-family: 'U-Medium';
+  src: url('assets/Ubuntu-Medium.ttf');
+}
+
+@font-face {
+  font-family: 'U-Medium';
+  src: url('assets/Ubuntu-MediumItalic.ttf');
+}
+
+@font-face {
+  font-family: 'U-Regular';
+  src: url('assets/Ubuntu-Regular.ttf');
+}
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

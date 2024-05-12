@@ -1,0 +1,51 @@
+$steel_blue: #314CB6;
+$steel_white: white;
+
+.bg-blue{
+  background-color: $steel_blue;
+  width: 100%;
+}
+
+a {
+  color: $steel_white;
+  font-family: U-Regular;
+  position: relative;
+  text-decoration: none;
+  font-size: 1rem;
+}
+
+.navbar-brand {
+  align-items: center;
+}
+
+.navbar-nav {
+  width: 100%;
+}
+
+.nav-item {
+  padding: 6px 14px;
+  text-align: center;
+}
+
+.nav-link {
+  padding-bottom: 10px;
+}
+
+
+.navbar-collapse.collapse.in {
+  display: block !important;
+}
+
+.profile-el{
+  margin-top: 0.3rem;
+  margin-right: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 1000ms;
+  border-radius: 5px;
+
+}
+.profile-el:hover svg path{
+  fill: black;
+}

@@ -1,0 +1,52 @@
+
+<h1>{{error}}</h1>
+<div class="card">
+  <div class="btn-container">
+    <button (click)="openDialogPort()" class="btn btn-add">Новый порт</button>
+    <button (click)="openDialogCounter()" class="btn btn-add">Новый счётчик</button>
+  </div>
+
+  <div class="card-body">
+    <div class="table-responsive tableFixHead">
+      <table class="table">
+        <thead class=" text-primary">
+        <th>
+          ID
+        </th>
+        <th>
+          Часовой пояс
+        </th>
+        <th>
+          Пароль
+        </th>
+        <th>
+          Номер
+        </th>
+        <th>
+          Модель
+        </th>
+        </thead>
+        <tbody>
+          <tr (click)="redirectOnCounter(i.counter.id)" *ngFor="let i of counters">
+            <td>
+              {{ i.counterName }}
+            </td>
+            <td>
+              {{ i.counter.timezone }}
+            </td>
+            <td>
+              {{ i.counter.password }}
+            </td>
+            <td>
+              {{ i.counter.number }}
+            </td>
+            <td>
+              {{ i.counter.model.name }}
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+

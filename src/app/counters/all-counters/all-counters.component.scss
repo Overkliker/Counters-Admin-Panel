@@ -1,0 +1,28 @@
+$color3: #B8B8B8;
+
+.tableFixHead {
+  overflow-y: auto;
+  height: 30rem;
+}
+.tableFixHead thead th {
+  position: sticky;
+  top: 0px;
+  background: white;
+}
+
+.btn-add{
+  width: 50%;
+}
+
+.btn-add:hover{
+  background-color: lighten($color3, 10%);
+}
+
+.btn-container{
+  display: flex;
+  justify-content: space-between;
+}
+
+td{
+  font-family: U-Regular;
+}

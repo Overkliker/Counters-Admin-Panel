@@ -1,0 +1,43 @@
+<div class="container-form">
+  <div class="form">
+    <p class="p-head">Введите данные</p>
+    <form [formGroup]="myForm" >
+      <div class="dialogs">
+
+        <input formControlName="Name" class="width-el margin_place" placeholder="Название">
+
+        <input formControlName="Serial" class="width-el margin_place" placeholder="Серийный номер">
+
+        <input formControlName="Password" class="width-el margin_place" placeholder="Пароль">
+
+        <input formControlName="TransformRation" class="width-el margin_place" placeholder="Коэффициент транс.">
+
+        <input formControlName="Number" class="width-el margin_place" placeholder="Номер рдс порта">
+
+        <div class="a-flex">
+          <p class="p-other">Порт:</p>
+
+          <select (change)="selectNewPort($event)" class="width-el">
+            <option value="{{ port.id }}" *ngFor="let port of data.allBuses">{{ port.name }}</option>
+          </select>
+        </div>
+
+        <div class="a-flex">
+          <p class="p-other">Модель:</p>
+
+          <select (change)="selectNewModel($event)" class="width-el">
+            <option value="{{ model.id }}" *ngFor="let model of data.allModels">{{ model.name }}</option>
+          </select>
+        </div>
+
+      </div>
+    </form>
+
+
+    <div class="buttons">
+      <button class="btn"  (click)="onNoClick()">Отмена</button>
+      <button (click)="onYesClick()" class="btn">Принять</button>
+    </div>
+  </div>
+</div>
+
