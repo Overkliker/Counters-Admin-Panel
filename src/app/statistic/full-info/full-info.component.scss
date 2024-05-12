@@ -1,28 +1,19 @@
 .div-chart{
   width: 60%;
+  height: 90%;
+}
+
+.wind-container{
+  height: 90%;
 }
 
 .full-widgets{
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
+  height: 80%;
 }
 
-.container-data{
-  display: flex;
-  justify-content: center;
-  margin-top: 25px;
-  width: 300px;
-}
-
-.on-next{
-  margin-left: 3rem;
-}
-
-.my-data{
-
-  margin-top: 5px;
-}
 
 .btn-reset{
   font-family: U-Regular;
@@ -35,7 +26,7 @@
 }
 
 .select-container{
-  margin-top: 10px;
+  margin-top: 70px;
   margin-left: 2%;
   width: 80%;
   display: flex;
@@ -60,7 +51,8 @@ $color3: #B8B8B8;
 
 .tableFixHead {
   overflow-y: auto;
-  height: 23rem;
+  height: 100%;
+
 }
 .tableFixHead thead th {
   position: sticky;
@@ -73,6 +65,17 @@ td{
 }
 
 
+.container-data{
+  display: flex;
+  justify-content: center;
+  margin-top: 25px;
+  width: 300px;
+  height: 100%;
+}
 
+.my-data{
+  height: 80%;
+  margin-top: 20px;
+}
 
 

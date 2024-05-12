@@ -118,14 +118,14 @@ query{
 
 const CreateCounter = gql`
 mutation CreateCounter(
-$uuid: String!,
- $busId: String!,
-  $modelId: String!,
-   $number: String!,
-   $password: String!,
-   $transformRation: Int!,
-   $serial: String!,
-   $name: String!
+    $uuid: String!,
+    $busId: String!,
+    $modelId: String!,
+    $number: String!,
+    $password: String!,
+    $transformRation: Int!,
+    $serial: String!,
+    $name: String!
    ){
     createCounter(
       uuid: $uuid,

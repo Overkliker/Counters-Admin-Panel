@@ -36,8 +36,8 @@ export class DialogCreateCounterComponent{
     @Inject(MAT_DIALOG_DATA) public data: any,
     private apollo: Apollo,
   ) {
-    this.currentPort = data.allBuses[0];
-    this.currentModel = data.allModels[0];
+    this.currentPort = data.allBuses[0].id;
+    this.currentModel = data.allModels[0].id;
   }
 
 
@@ -50,22 +50,25 @@ export class DialogCreateCounterComponent{
     if (this.myForm.valid) {
       const uuid = new UUID()['str'];
 
+      console.log(this.myForm)
+      console.log(this.currentModel)
+      console.log(this.currentPort)
+      console.log((+this.myForm.value.TransformRation))
 
-      this.apollo.watchQuery({
-        query: CreateCounter,
+
+      this.apollo.mutate({
+        mutation: CreateCounter,
         variables: {
           uuid: uuid,
           number: this.myForm.value.Number,
           password: this.myForm.value.Password,
-          transformRation: this.myForm.value.TransformRation,
+          transformRation: +this.myForm.value.TransformRation,
           serial: this.myForm.value.Serial,
           modelId: this.currentModel,
           busId: this.currentPort,
           name: this.myForm.value.Name
         }
-      }).valueChanges.subscribe(({data, error}: any) => {
-        console.log(data.createCounter);
-      })
+      }).subscribe()
 
       this.dialogRef.close();
     }
