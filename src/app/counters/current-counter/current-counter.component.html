@@ -1,6 +1,49 @@
-<div>
-  <p>{{counter.id}}</p>
-  <p>{{counter.ip}}</p>
-  <p>{{counter.port}}</p>
-  <p>{{counter.password}}</p>
+<div class="div_all">
+  <div *ngIf="counter" class="div_info">
+    <p class="light_p">Название: <p class="reg_p">{{counter.name.counterName}}</p>
+    <p class="light_p">Адресс: <p class="reg_p">{{counter.ip}}</p>
+    <p class="light_p">Порт: <p class="reg_p">{{counter.port}}</p>
+    <p class="light_p">Пароль: <p class="reg_p">{{counter.password}}</p>
+  </div>
+
+  <div class="container_indications">
+
+    <div class="div_background_table">
+      <div class="div_table">
+        <table>
+          <tr>
+            <th>Время опроса</th>
+            <th class="hover_th" *ngFor="let i of dataValues">{{ i.timestamp }}</th>
+          </tr>
+          <tr>
+            <td>Значение</td>
+            <td class="hover_td" *ngFor="let i of dataValues">{{ i.value }}</td>
+          </tr>
+        </table>
+      </div>
+    </div>
+
+
+
+    <div class="selectors_and_updaters_container">
+      <button *ngIf="!dataType" (click)="setTypeData()" class="btn btn-reset">Показания</button>
+      <button *ngIf="dataType" (click)="setTypeData()" style="background-color: #FFBA00" class="btn select-type-btn">Потребление</button>
+
+      <div class="date-container">
+        <p style="margin-right: 5px">Начало: </p>
+        <input type="date" [(ngModel)]="bindingStartDate" id="from-date-picker">
+      </div>
+
+      <div class="date-container">
+        <p style="margin-right: 5px">Конец: </p>
+        <input type="date" [(ngModel)]="bindingEndDate" id="to-date-picker">
+      </div>
+
+      <button (click)="reselectClick()" class="btn btn-reset" >Обновить</button>
+
+    </div>
+
+  </div>
 </div>
+
+

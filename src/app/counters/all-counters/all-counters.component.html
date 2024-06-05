@@ -27,21 +27,21 @@
         </th>
         </thead>
         <tbody>
-          <tr (click)="redirectOnCounter(i.counter.id)" *ngFor="let i of counters">
+          <tr (click)="redirectOnCounter(i.id)" *ngFor="let i of counters">
             <td>
-              {{ i.counterName }}
+              {{ i.name.counterName }}
             </td>
             <td>
-              {{ i.counter.timezone }}
+              {{ i.timezone }}
             </td>
             <td>
-              {{ i.counter.password }}
+              {{ i.password }}
             </td>
             <td>
-              {{ i.counter.number }}
+              {{ i.number }}
             </td>
             <td>
-              {{ i.counter.model.name }}
+              {{ i.model.name }}
             </td>
           </tr>
         </tbody>

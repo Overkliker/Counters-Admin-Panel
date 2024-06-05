@@ -1,5 +1,5 @@
 .div-chart{
-  width: 60%;
+  width: 68%;
   height: 90%;
 }
 
@@ -26,17 +26,20 @@
 }
 
 .select-container{
-  margin-top: 70px;
+  margin-top: 50px;
   margin-left: 2%;
   width: 80%;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
   flex-wrap: wrap;
 }
 
 .date-container{
   display: flex;
-  height: 30px;
+  flex-direction: column;
+  align-items: center;
+  max-height: 10rem;
+
 }
 
 
@@ -46,36 +49,38 @@
   background-color: #314CB6;
 }
 
-
 $color3: #B8B8B8;
 
 .tableFixHead {
-  overflow-y: auto;
-  height: 100%;
-
+  scrollbar-width: none;
+  margin-top: 40px;
+  max-height: 90%;
+  width: 350px;
 }
 .tableFixHead thead th {
-  position: sticky;
+  position: static;
   top: 0px;
   background: white;
+  text-align: center;
 }
 
 td{
   font-family: U-Regular;
+  text-align: center;
 }
 
 
-.container-data{
-  display: flex;
-  justify-content: center;
-  margin-top: 25px;
-  width: 300px;
-  height: 100%;
-}
 
-.my-data{
-  height: 80%;
-  margin-top: 20px;
-}
+//
+//.container-data{
+//  display: flex;
+//  justify-content: center;
+//  margin-top: 25px;
+//  width: 300px;
+//  height: 80%;
+//  overflow: auto;
+//}
+
+
 
 

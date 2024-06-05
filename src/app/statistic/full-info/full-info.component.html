@@ -4,17 +4,17 @@
       <app-my-indications-chart [points]="pointsChart"></app-my-indications-chart>
     </div>
 
-    <div class="my-data">
-      <div class="card">
-        <div class="container-data ">
-        <div class="card-body">
+<!--    <div class="my-data">-->
+<!--      <div class="card">-->
+<!--        <div class="container-data ">-->
+<!--        <div class="card-body">-->
 
 
-          <div class="table-responsive tableFixHead">
+          <div class="container-data card table-responsive tableFixHead">
 
             <table class="table" >
               <thead class=" text-primary">
-              <th>
+              <th colspan="1">
                 Время
               </th>
               <th>
@@ -36,10 +36,10 @@
           </div>
 
 
-        </div>
-      </div>
-    </div>
-    </div>
+<!--        </div>-->
+<!--      </div>-->
+<!--    </div>-->
+<!--    </div>-->
 
     <div class="select-container">
       <div class="date-container">
@@ -52,16 +52,16 @@
         <input type="date" [(ngModel)]="bindingEndDate" id="to-date-picker">
       </div>
 
-      <div class="">
+      <div style="max-height: 3rem">
         <button (click)="reselectClick()" class="btn btn-reset" >Обновить</button>
       </div>
 
       <select (change)="selectNewCounter($event)" id="counter-select">
         <optgroup *ngFor="let counter of counterIds" label="">
-          <option value="{{counter.counter.id}}">{{counter.counterName}}</option>
+          <option value="{{counter.id}}">{{counter.name.counterName}}</option>
         </optgroup>
-
       </select>
+
 
 
       <div>

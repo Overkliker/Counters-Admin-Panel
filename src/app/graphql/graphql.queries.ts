@@ -23,15 +23,15 @@ const FindLatestConsumption = gql`
 const FindAllCounters = gql`
   query{
   findAllCounters{
-    counterName
-    counter{
+    name{
+      counterName
+    }
     id,
       timezone,
     password,
-    number
+    number,
     model{
       name
-    }
     }
   }
   }
@@ -40,10 +40,10 @@ const FindAllCounters = gql`
 const FindAllNamedCountersId = gql`
   query{
   findAllCounters{
+    name{
     counterName
-    counter{
-      id
-    }
+    },
+    id
   }
 }
 `
@@ -59,7 +59,9 @@ const FindAllCounterIds= gql`
 const FindCounterById = gql`
   query FindCounterById($id: String!){
     findCounterById(id: $id){
-        id,
+        name{
+          counterName
+        },
         ip,
         port,
         model{
@@ -141,6 +143,28 @@ mutation CreateCounter(
 `
 
 
+const CreatePort = gql`
+mutation CreatePort(
+    $uuid: String!,
+    $name: String!,
+    $ip: String!,
+    $port: Int!,
+    $monitoring: Int!,
+    $maxUnavalible: Int!
+   ){
+    createPort(
+      uuid: $uuid,
+      name: $name,
+      ip: $ip,
+      port: $port,
+      monitoring: $monitoring,
+      maxUnavalible: $maxUnavalible
+    )
+   }
+`
+
+
+
 export {
   FindAllCounters,
   FindCounterById,
@@ -153,4 +177,5 @@ export {
   GetPopUp,
   FindModels,
   CreateCounter,
+  CreatePort,
 };

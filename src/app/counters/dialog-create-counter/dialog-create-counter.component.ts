@@ -50,12 +50,6 @@ export class DialogCreateCounterComponent{
     if (this.myForm.valid) {
       const uuid = new UUID()['str'];
 
-      console.log(this.myForm)
-      console.log(this.currentModel)
-      console.log(this.currentPort)
-      console.log((+this.myForm.value.TransformRation))
-
-
       this.apollo.mutate({
         mutation: CreateCounter,
         variables: {

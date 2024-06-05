@@ -4,6 +4,7 @@ import {FindAllCounters, FindModels, GetPopUp} from "../../graphql/graphql.queri
 import {Router} from "@angular/router";
 import {DialogCreateCounterComponent} from "../dialog-create-counter/dialog-create-counter.component";
 import {MatDialog} from "@angular/material/dialog";
+import {DialogCreatePortComponent} from "../dialog-create-port/dialog-create-port.component";
 
 
 @Component({
@@ -47,7 +48,10 @@ export class AllCountersComponent implements OnInit{
   }
 
   openDialogPort(): void{
-
+    const dialogRef = this.dialog.open(DialogCreatePortComponent, {
+      width: '600px',
+      height: '500px',
+    });
   }
 
   updateCounters():void{

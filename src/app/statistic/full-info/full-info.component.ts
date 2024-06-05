@@ -24,8 +24,6 @@ export class FullInfoComponent implements OnInit{
   private dateStart?: string;
   private dateEnd?: string;
   private currentCounter?: string;
-  public lastData?: string;
-  public thisMonth?: string;
 
   public bindingStartDate: Date = new Date();
   public bindingEndDate: Date = new Date();
@@ -81,7 +79,6 @@ export class FullInfoComponent implements OnInit{
   }
 
   updatePointsOnIndications(id: string): void{
-    console.log(this.currentCounter)
     this.apollo.watchQuery({
       query: FindByIntervalIndications,
       variables: {
