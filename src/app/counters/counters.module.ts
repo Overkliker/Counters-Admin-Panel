@@ -11,6 +11,7 @@ import {MatInputModule} from "@angular/material/input";
 import {MatButtonModule} from "@angular/material/button";
 import {MatChipsModule} from "@angular/material/chips";
 import { DialogCreatePortComponent } from './dialog-create-port/dialog-create-port.component';
+import { GetService } from './services/get.service';
 
 
 
@@ -31,6 +32,9 @@ import { DialogCreatePortComponent } from './dialog-create-port/dialog-create-po
     MatButtonModule,
     MatChipsModule,
     ReactiveFormsModule,
+  ],
+  providers: [
+    GetService,
   ]
 })
 export class CountersModule { }

@@ -12,7 +12,7 @@
 
         <input formControlName="TransformRation" class="width-el margin_place" placeholder="Коэффициент транс.">
 
-        <input formControlName="Number" class="width-el margin_place" placeholder="Номер рдс порта">
+        <input formControlName="Number" class="width-el margin_place" placeholder="Номер порта счётч.">
 
         <div class="a-flex">
           <p class="p-other">Порт:</p>
@@ -37,6 +37,13 @@
     <div class="buttons">
       <button class="btn"  (click)="onNoClick()">Отмена</button>
       <button (click)="onYesClick()" class="btn">Принять</button>
+    </div>
+
+    <div>
+      <button class="btn" (click)="pingClick()">Опросить</button>
+      <p ng-bind="">
+        {{textOfresponse}}
+      </p>
     </div>
   </div>
 </div>

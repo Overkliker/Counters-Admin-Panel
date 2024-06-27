@@ -138,4 +138,5 @@ export class CurrentCounterComponent implements OnInit {
       this.getIndicationsByPeriod()
     }
   }
+
 }

@@ -28,7 +28,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     NgOptimizedImage,
     HttpClientModule,
     GraphQLModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    HttpClientModule
   ],
   bootstrap: [AppComponent],
   providers: []
